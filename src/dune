@@ -1,0 +1,11 @@
+(executable
+  (name main)
+  (public_name miniml)
+  (package miniml_interpreter))
+
+(ocamllex lexer)
+(menhir (modules parser))
+
+(env
+  (dev
+    (flags (:standard -warn-error -A))))
